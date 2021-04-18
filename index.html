@@ -10,13 +10,35 @@
 <body>
     <canvas id="jsCanvas" class="canvas"></canvas>
     <div class="controls">
+        <div class="controls__colors" id="jscolors">
+            <div class="controls__color jscolor" style="background-color: #030003;"></div>
+        </div>
         <div class="controls__range">
-            <input type="range" min="0.1" max="5.0" value="2.5" step="0.1" id="jsRange">
+            Size
+            <input type="range" min="0.1" max="50.0" value="2.5" step="0.1" id="jsSizeRange">
+            Opacity
+            <input type="range" min="0" max="1" value="1" step="0.01" id="jsRange">
         </div>
         <div class="controls__btns">
-            <button id="jsFillMode" >Paint</button>
-            <button id="jsSAVE">SAVE</button>
-            <button id="jsReset">RESET</button>
+            <div class="brush__style">
+            <span class="BrushExp">
+                Brush Style
+            </span >
+            <button id="RoundBrushBtn" >Round</button>
+            <button id="SquareBrushBtn">Square</button>
+            </div>
+            <div class="brush__mode">
+            <span class="BrushExp">
+                Brush mode
+            </span>
+            <button id="jsPointMode" class="jsPointMode" >Paint</button>
+            <button id="jsFillMode"  >Fill</button>
+        </div>
+        <div class="setting">
+        <button id="jsPrint" >Print</button>
+        <button id="jsSAVE">SAVE</button>
+        <button id="jsReset">RESET</button>
+        </div>
         </div>
         <div class="controls__colors" id="jscolors">
             <div class="controls__color jscolor" style="background-color: #030003;"></div>
@@ -28,6 +50,7 @@
             <div class="controls__color jscolor" style="background-color: #5AC8FA;"></div>
             <div class="controls__color jscolor" style="background-color: #0579FF;"></div>
             <div class="controls__color jscolor" style="background-color: #5856D6;"></div>
+            <div class="controls__color jscolor" style="background-color: #838383;"></div>
         </div>
     </div>
 </body>

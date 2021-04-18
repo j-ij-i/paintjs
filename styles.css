@@ -27,9 +27,24 @@ body{
     align-items: center;
 }
 
+.setting,
+.brush__style,
+.brush__mode{
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px 50px;
+    background-color: rgb(226, 226, 226);
+}
+.BrushExp{
+    font-weight: 500;
+}
+
 .controls .controls__btns{
     margin-bottom:30px
 }
+
+
 
 .controls__btns button{
     all:unset;
@@ -47,6 +62,10 @@ body{
     font-size: 12px;
 }
 
+.jsPointMode {
+    background-color: #0779FF;
+    color: "white";
+}
 .controls .controls__colors {
     display: flex;
   }
