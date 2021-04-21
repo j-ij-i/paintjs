@@ -9,6 +9,7 @@ const saveBtn = document.getElementById("jsSAVE");
 const print = document.getElementById("jsPrint");
 const SqrBrushBtn = document.getElementById("SquareBrushBtn");
 const RodBrushBtn = document.getElementById("RoundBrushBtn");
+const currentColor = document.getElementById("currentColor");
 const CANVAS_SIZE = 700;
 canvas.width = CANVAS_SIZE;
 canvas.height = CANVAS_SIZE;
@@ -22,6 +23,7 @@ ctx.fillStyle = "white";
 ctx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
 let RoundOrSquare = true;
 let paintorfill = true;
+currentColor.style.backgroundColor = ctx.fillStyle;
 //true일때 paint false일때 fill
 let LiNEWT = 2.5;
 let painting = false;
@@ -70,6 +72,7 @@ function onMouseLeave(e){
 function handleColorClick(e){
     LCOLOR = e.target.style.backgroundColor;
     ctx.strokeStyle = LCOLOR;
+    currentColor.style.backgroundColor = "#0779FF";
 }
 
 function handleRange(e){
@@ -135,7 +138,7 @@ function resetCanvas(e){
 }
 
 function handleCM(e){
-  //  e.preventDefault();
+    e.preventDefault();
 }
 
 function handleSaveClick(e){
